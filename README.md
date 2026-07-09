@@ -30,8 +30,8 @@ Semua data disimpan di **localStorage** browser, sehingga data tetap ada meski h
 ```
 CodingCamp-6July2026-TaufiqSholikhin/
 │
-├── index.html                        ← Versi awal (ditulis manual, tanpa styling)
-├── index add tailwind by kiro.html   ← Versi final dengan Tailwind v4 + glassmorphism
+├── index_awal.html                   ← Versi awal (ditulis manual, tanpa styling)
+├── index.html                        ← Versi final dengan Tailwind v4 + glassmorphism
 ├── styles.css                        ← Semua styling: glassmorphism, dark/light mode, komponen
 ├── app.js                            ← Semua logika JavaScript: data, render, sort, tema
 └── README.md                         ← Dokumentasi ini
@@ -41,8 +41,8 @@ CodingCamp-6July2026-TaufiqSholikhin/
 
 | File | Peran |
 |---|---|
-| `index.html` | Versi awal yang ditulis sendiri, struktur HTML dasar tanpa CSS/JS |
-| `index add tailwind by kiro.html` | Versi final dengan Tailwind v4, terhubung ke `styles.css` dan `app.js` |
+| `index_awal.html` | Versi awal yang ditulis sendiri, struktur HTML dasar tanpa CSS/JS |
+| `index.html` | Versi final dengan Tailwind v4, terhubung ke `styles.css` dan `app.js` |
 | `styles.css` | Seluruh visual: CSS variables, glassmorphism, dark/light mode, animasi |
 | `app.js` | Seluruh logika: CRUD transaksi, sort, kategori custom, render chart, tema |
 
@@ -85,7 +85,7 @@ CodingCamp-6July2026-TaufiqSholikhin/
 Tidak perlu instalasi apapun.
 
 1. Clone atau download repository ini
-2. Buka file `index add tailwind by kiro.html` langsung di browser (Chrome, Firefox, Edge, Safari)
+2. Buka file `index.html` langsung di browser (Chrome, Firefox, Edge, Safari)
 3. Aplikasi langsung berjalan
 
 ```bash
@@ -93,13 +93,13 @@ Tidak perlu instalasi apapun.
 npx serve .
 ```
 
-> File `index.html` adalah versi awal tanpa styling. Buka `index add tailwind by kiro.html` untuk versi final.
+> `index_awal.html` adalah versi awal tanpa styling. Buka `index.html` untuk versi final.
 
 ---
 
 ## Penjelasan Kode
 
-### HTML (`index add tailwind by kiro.html`)
+### HTML (`index.html`)
 Struktur halaman dibagi menjadi 4 card:
 1. **Total card** — menampilkan `#JumlahTotal`
 2. **Form card** — form input + panel kategori kustom
@@ -159,7 +159,7 @@ Ini adalah bagian penting untuk transparansi dalam konteks tugas RevoU.
 
 | Bagian | Detail |
 |---|---|
-| `index.html` (versi awal) | Seluruh struktur HTML dasar ditulis sendiri: form, label, input, select, canvas, div pembungkus dengan class `wadah` |
+| `index_awal.html` (versi awal) | Seluruh struktur HTML dasar ditulis sendiri: form, label, input, select, canvas, div pembungkus dengan class `wadah` |
 | Logika dasar aplikasi | Pemahaman konsep: form submit, ambil nilai input, tambah ke array, tampilkan ke DOM, hitung total |
 | Struktur data | Keputusan menyimpan `{ nama, jumlah, kategori }` per transaksi |
 | Penggunaan `id` DOM | Penentuan nama ID untuk elemen: `JumlahTotal`, `formTransaksi`, `namaBarang`, `jumlahUang`, `kategori`, `daftarTransaksi`, `grafikLingkaran` |
@@ -172,7 +172,7 @@ Ini adalah bagian penting untuk transparansi dalam konteks tugas RevoU.
 
 | Bagian | Detail |
 |---|---|
-| `index add tailwind by kiro.html` | Refactor HTML dengan Tailwind v4 CDN, struktur card yang rapi, aria-label untuk aksesibilitas |
+| `index.html` | Refactor HTML dengan Tailwind v4 CDN, struktur card yang rapi, aria-label untuk aksesibilitas |
 | `styles.css` | Seluruh file: CSS variables dark/light, glassmorphism `backdrop-filter`, animasi, responsive layout, semua komponen visual |
 | `app.js` | Implementasi lengkap: fungsi render, sort, custom category, theme toggle, `escapeHtml` untuk keamanan XSS, `hexAlpha` helper, `DOMContentLoaded` wiring |
 | Donut chart | Refactor dari lingkaran biasa menjadi donut dengan hole, center text, dan legend dinamis |
@@ -183,6 +183,6 @@ Ini adalah bagian penting untuk transparansi dalam konteks tugas RevoU.
 
 ### Kesimpulan
 
-Versi awal (`index.html`) **100% ditulis sendiri** sebagai fondasi dan bukti pemahaman dasar HTML, form, dan konsep logika aplikasi. Versi final (`index add tailwind by kiro.html` + `styles.css` + `app.js`) dikembangkan **bersama AI (Kiro)** untuk menambahkan visual yang lebih baik dan fitur-fitur lanjutan, dengan pemahaman penuh atas setiap bagian kode yang dihasilkan — mulai dari cara kerja CSS variables, alur render DOM, hingga logika sort dan storage.
+Versi awal (`index_awal.html`) **100% ditulis sendiri** sebagai fondasi dan bukti pemahaman dasar HTML, form, dan konsep logika aplikasi. Versi final (`index.html` + `styles.css` + `app.js`) dikembangkan **bersama AI (Kiro)** untuk menambahkan visual yang lebih baik dan fitur-fitur lanjutan, dengan pemahaman penuh atas setiap bagian kode yang dihasilkan — mulai dari cara kerja CSS variables, alur render DOM, hingga logika sort dan storage.
 
 > Penggunaan AI dalam konteks ini bukan untuk menghindari belajar, melainkan sebagai alat kolaborasi — seperti pair programming — di mana saya mengarahkan apa yang ingin dibangun dan memahami hasilnya.
