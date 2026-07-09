@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title> <h1> Pencataan Pengeluaran </h1>
+</head>
+<body>
+  <hr/>
+
+  <div class="wadah">
+    <header>
+      <h2>Total Pengeluaran</h2>
+      <p id="JumlahTotal">Rp 0</p>
+    </header>
+
+    <section>
+      <h3>Tambah Pengeluaran</h3>
+      <form id="formTransaksi">
+        <div>
+          <label for="namaBarang">Nama Barang / Kebutuhan:</label>
+          <input type="text" id="namaBarang" placeholder="Contoh: Belanja Sayur" required>
+        </div>
+
+        <div>
+          <label for="jumlahUang">Jumlah Uang (Rp):</label>
+          <input type="number" id="jumlahUang" min="o" placeholder="contoh: 12500" required>
+        </div>
+        
+        <br/>
+
+        <div>
+          <label for="kategori">Kategori:</label>
+          <select id="kategori" required>
+            <option value="">--Pilih Kategori</option>
+            <option value="Makanan">Makanan</option>
+            <option value="Transportasi">Transportasi</option>
+            <option value="Hiburan">Hiburan</option>
+          </select>
+        </div>
+
+        <div>
+          <button type="submit">Simpan Data</button>
+        </div>
+
+      </form>
+    </section>
+     <hr/>
+
+    <section>
+      <h3>Daftar Pengeluaran</h3>
+      <div id="daftarTransaksi">
+        <p>Belum ada data yang di masukkan</p>
+      </div>
+    </section>
+    <hr/>
+
+    <section>
+      <h3> Presentase pengeluaran per Kategori</h3>
+      <div>
+        <canvas id="grafikLingkaran" width="300" height="300"></canvas>
+      </div>
+    </section>
+
+  </div>
+  
+</body>
+</html>
