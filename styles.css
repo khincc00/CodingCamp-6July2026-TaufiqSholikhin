@@ -45,8 +45,6 @@
   --modal-overlay: rgba(0, 0, 0, 0.5);
   --modal-bg: rgba(30, 27, 60, 0.95);
   --modal-border: rgba(255, 255, 255, 0.18);
-  --toggle-icon: '🌙';
-  --select-arrow: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='rgba(255,255,255,0.4)' stroke-width='1.8' fill='none' stroke-linecap='round'/%3E%3C/svg%3E";
 }
 
 /* ── Light mode overrides ── */
@@ -91,7 +89,6 @@ body.light {
   --modal-overlay: rgba(0, 0, 0, 0.3);
   --modal-bg: rgba(240, 242, 255, 0.97);
   --modal-border: rgba(99, 102, 241, 0.2);
-  --select-arrow: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='rgba(26,26,46,0.4)' stroke-width='1.8' fill='none' stroke-linecap='round'/%3E%3C/svg%3E";
 }
 
 /* ── Base ── */
