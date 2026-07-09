@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pencatatan Pengeluaran</title>
+
+  <!-- Tailwind CSS v4 (CDN / browser build) -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- Custom glassmorphism + iOS styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <div class="page-wrapper">
+
+    <!-- ── Page header ── -->
+    <header class="page-header">
+      <!-- spacer so title stays centered -->
+      <div style="width:40px"></div>
+
+      <div class="page-header-text">
+        <p class="eyebrow">Keuangan Pribadi</p>
+        <h1>Pencatatan Pengeluaran</h1>
+      </div>
+
+      <!-- Dark / Light mode toggle -->
+      <button id="btnTheme" class="btn-theme" aria-label="Toggle tema gelap/terang">
+        ☀️
+      </button>
+    </header>
+
+    <!-- ── Total card ── -->
+    <div class="glass-card total-card">
+      <p class="label">Total Pengeluaran</p>
+      <p id="JumlahTotal" class="amount">Rp 0</p>
+    </div>
+
+    <!-- ── Form card ── -->
+    <div class="glass-card">
+      <p class="card-title">Tambah Pengeluaran</p>
+
+      <form id="formTransaksi" novalidate>
+
+        <div class="form-group">
+          <label for="namaBarang">Nama Barang / Kebutuhan</label>
+          <input
+            type="text"
+            id="namaBarang"
+            class="ios-input"
+            placeholder="Contoh: Belanja Sayur"
+            autocomplete="off"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="jumlahUang">Jumlah Uang (Rp)</label>
+          <input
+            type="number"
+            id="jumlahUang"
+            class="ios-input"
+            min="1"
+            placeholder="Contoh: 12500"
+            required
+          >
+        </div>
+
+        <!-- Kategori row: select + add-custom button -->
+        <div class="form-group">
+          <div class="card-header" style="margin-bottom:4px">
+            <label for="kategori" style="margin-bottom:0">Kategori</label>
+            <button type="button" id="btnToggleCustomCat" class="btn-sm">＋ Kategori</button>
+          </div>
+
+          <!-- Category select — populated by app.js -->
+          <select id="kategori" class="ios-input" required></select>
+
+          <!-- Inline custom-category panel -->
+          <div id="customCatPanel" class="custom-cat-panel">
+            <div class="custom-cat-input-row">
+              <input
+                type="text"
+                id="customCatInput"
+                class="ios-input"
+                placeholder="Nama kategori baru…"
+                autocomplete="off"
+                maxlength="30"
+              >
+              <button type="button" id="btnAddCat" class="btn-add-cat">Tambah</button>
+            </div>
+            <!-- Existing custom category tags -->
+            <div id="customCatList" class="custom-cat-list"></div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-primary">Simpan Data</button>
+
+      </form>
+    </div>
+
+    <!-- ── Expense list card ── -->
+    <div class="glass-card">
+      <p class="card-title">Daftar Pengeluaran</p>
+
+      <!-- Sort bar -->
+      <div id="sortBar" class="sort-bar">
+        <!-- populated by app.js -->
+      </div>
+
+      <div id="daftarTransaksi">
+        <!-- populated by app.js -->
+      </div>
+    </div>
+
+    <!-- ── Chart card ── -->
+    <div class="glass-card">
+      <p class="card-title">Persentase per Kategori</p>
+      <div class="chart-wrap">
+        <canvas id="grafikLingkaran" width="220" height="220"></canvas>
+        <div id="legendGrafik" class="chart-legend"></div>
+      </div>
+    </div>
+
+  </div><!-- /.page-wrapper -->
+
+  <!-- App logic -->
+  <script src="app.js"></script>
+
+</body>
+</html>
